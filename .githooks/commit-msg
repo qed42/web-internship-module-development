@@ -1,0 +1,12 @@
+#!/bin/bash
+
+commit_message=$(cat "$1")
+pattern="^(dev|feat|fix|docs|style|refactor|test|chore|perf|config)\([a-z0-9_]+\): .+( #[0-9]+)?$"
+
+if [[ ! $commit_message =~ $pattern ]]; then
+  echo "❌ Commit message does not follow the format:"
+  echo "[type](module_name): [message]"
+  exit 1
+fi
+
+echo "✅ Commit message format is correct!"
