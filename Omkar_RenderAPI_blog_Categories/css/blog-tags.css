@@ -1,0 +1,29 @@
+.blog-tags-sidebar {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 15px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.blog-tags-sidebar h2 {
+  color: #ff9800; /* Orange accent color */
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tag-link {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.tag-link:hover {
+  background: #ff9800; /* Orange hover effect */
+}
