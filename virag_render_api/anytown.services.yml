@@ -1,0 +1,5 @@
+services:
+  anytown.forecast_client:
+    class: Drupal\anytown\ForecastClient
+    arguments: ['@http_client', '@logger.factory']
+  Drupal\anytown\ForecastClientInterface: '@anytown.forecast_client'

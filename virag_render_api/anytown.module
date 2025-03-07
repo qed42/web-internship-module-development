@@ -1,0 +1,7 @@
+// module name : anytown
+<?php
+
+/**
+ * @file
+ * Primary module hooks for anytown module.
+ */

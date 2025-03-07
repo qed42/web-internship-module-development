@@ -1,0 +1,8 @@
+# Each link needs a unique name. We recommend prefixing links with the name of
+# your module. A links.menu.yml file can contain any number of link definitions.
+anytown.weather:
+  title: Weather
+  description: Check this week's weather.
+  menu_name: main
+  # From anytown.routing.yml.
+  route_name: anytown.weather_page
