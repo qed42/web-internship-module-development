@@ -8,6 +8,10 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
  * Provides a 'Blog Tags Sidebar' Block.
@@ -18,20 +22,47 @@ use Drupal\Core\Link;
  *   category = @Translation("Custom")
  * )
  */
-class BlogCategoriesBlock extends BlockBase {
+class BlogCategoriesBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * The entity type manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Constructs a BlogCategoriesBlock object.
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManagerInterface $entity_type_manager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->entityTypeManager = $entity_type_manager;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('entity_type.manager')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
   public function build(): array {
     $tags = $this->getBlogTags();
-  
+
     if (empty($tags)) {
       return [
         '#markup' => $this->t('No tags found.'),
       ];
     }
-  
+
     $build = [
       '#theme' => 'links',
       '#links' => [],
@@ -47,7 +78,7 @@ class BlogCategoriesBlock extends BlockBase {
         ],
       ],
     ];
-  
+
     foreach ($tags as $tag) {
       $build['#links'][] = [
         'title' => $tag['name'],
@@ -55,21 +86,17 @@ class BlogCategoriesBlock extends BlockBase {
         'attributes' => ['class' => ['tag-link']],
       ];
     }
-  
+
     return $build;
   }
-  
 
   /**
    * Get all taxonomy terms from the "tags" vocabulary.
    */
   private function getBlogTags(): array {
-    $terms = \Drupal::entityTypeManager()
-      ->getStorage('taxonomy_term')
-      ->loadTree('tags'); // 'tags' is your vocabulary name
+    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadTree('tags');
 
     $tags = [];
-
     foreach ($terms as $term) {
       $tags[] = [
         'name' => $term->name,
@@ -79,4 +106,5 @@ class BlogCategoriesBlock extends BlockBase {
 
     return $tags;
   }
+
 }
