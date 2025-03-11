@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 declare(strict_types=1);
 
@@ -31,7 +31,7 @@ class ForecastClient implements ForecastClientInterface {
    * Construct a forecast API client.
    *
    * @param \GuzzleHttp\ClientInterface $httpClient
-   *    Guzzle HTTP client.
+   *   Guzzle HTTP client.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   Logger factory service.
    */

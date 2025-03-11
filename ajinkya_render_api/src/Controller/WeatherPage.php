@@ -49,7 +49,9 @@ class WeatherPage extends ControllerBase {
     $url = 'https://raw.githubusercontent.com/DrupalizeMe/module-developer-guide-demo-site/main/backups/weather_forecast.json';
     $forecast_data = $this->forecastClient->getForecastData($url);
 
-    $rows = [];
+    $table_rows = [];
+    $highest = 0;
+    $lowest = 0;
     if ($forecast_data) {
       // Create a table of the weather forecast as a render array. First loop
       // over the forecast data and create rows for the table.
@@ -62,7 +64,8 @@ class WeatherPage extends ControllerBase {
           'icon' => $icon,
         ] = $item;
 
-        $rows[] = [
+        // Create one table row for each day in the forecast.
+        $table_rows[] = [
           // Simple text for a cell can be added directly to the array.
           $weekday,
           // Complex data for a cell, like HTML, can be represented as a nested
@@ -78,8 +81,12 @@ class WeatherPage extends ControllerBase {
             ],
           ],
         ];
+
+        $highest = max($highest, $high);
+        $lowest = min($lowest, $low);
       }
 
+      // Extended forecast as a table.
       $weather_forecast = [
         '#type' => 'table',
         '#header' => [
@@ -87,24 +94,36 @@ class WeatherPage extends ControllerBase {
           '',
           'Forecast',
         ],
-        '#rows' => $rows,
+        '#rows' => $table_rows,
         '#attributes' => [
           'class' => ['weather_page--forecast-table'],
         ],
+      ];
+
+      // Summary forecast.
+      $short_forecast = [
+        '#type' => 'markup',
+        '#markup' => "The high for the weekend is {$highest} and the low is {$lowest}.",
       ];
 
     }
     else {
       // Or, display a message if we can't get the current forecast.
       $weather_forecast = ['#markup' => '<p>Could not get the weather forecast. Dress for anything.</p>'];
+      $short_forecast = NULL;
     }
 
     $build = [
-      'weather_intro' => [
+      '#theme' => 'weather_page',
+      // When passing a render array to Twig template file any top level array
+      // element that starts with a '#' will be a variable in the template file.
+      // Example: {{ weather_intro }}.
+      '#weather_intro' => [
         '#markup' => "<p>Check out this weekend's weather forecast and come prepared. The market is mostly outside, and takes place rain or shine.</p>",
       ],
-      'weather_forecast' => $weather_forecast,
-      'weather_closures' => [
+      '#weather_forecast' => $weather_forecast,
+      '#short_forecast' => $short_forecast,
+      '#weather_closures' => [
         '#theme' => 'item_list',
         '#title' => 'Weather related closures',
         '#items' => [

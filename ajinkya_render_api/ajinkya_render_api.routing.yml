@@ -1,4 +1,4 @@
-# Route definitions for the anytown module.
+# Route definitions for the ajinkya_render_api module.
 
 # Each route needs a unique identifier. We recommend prefixing the route name
 # with the name of your module. Indented under the route name is the definition
@@ -15,4 +15,5 @@ ajinkya_render_api.weather_page:
     style: 'short'
   requirements:
     # What permissions a user needs to have in order to view this page.
-    _permission: 'access content'
+    _permission: 'view weekly weather'
+
