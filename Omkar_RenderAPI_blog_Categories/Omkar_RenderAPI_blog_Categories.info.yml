@@ -1,0 +1,5 @@
+name: 'Omkar Render API Blog Categories'
+type: module
+description: 'Provides blog categories block using Render API'
+core_version_requirement: ^11
+package: Custom
