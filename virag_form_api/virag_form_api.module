@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for virag_form_api module.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function virag_form_api_cron() {
+  \Drupal::state()->delete('virag_form_api.user_data');
+  \Drupal::logger('virag_form_api')->notice('Cleared user data from state API.');
+}

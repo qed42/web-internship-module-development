@@ -1,0 +1,5 @@
+name: 'Form API'
+type: module
+description: 'Provides a user details form and displays submitted information.'
+package: Custom
+core_version_requirement: ^10 || ^11
