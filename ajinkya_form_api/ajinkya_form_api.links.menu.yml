@@ -1,0 +1,14 @@
+# Each link needs a unique name. We recommend prefixing links with the name of
+# your module. A links.menu.yml file can contain any number of link definitions.
+ajinkya_form_api.weather:
+  title: Weather
+  description: Check this week's weather.
+  menu_name: main
+  # From ajinkya_form_api.routing.yml.
+  route_name: ajinkya_form_api.weather_page
+
+ajinkya_form_api.settings:
+  title: Ajinkya Form api Settings
+  parent: system.admin_config_system
+  route_name: ajinkya_form_api.settings
+  weight: 10
