@@ -1,0 +1,4 @@
+services:
+  weather_module.weather_client:
+    class: Drupal\weather_module\WeatherClient
+    arguments: ['@http_client']
