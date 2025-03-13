@@ -1,0 +1,5 @@
+services:
+  ajinkya_render_api.forecast_client:
+    class: Drupal\ajinkya_render_api\ForecastClient
+    arguments: ['@http_client', '@logger.factory']
+  Drupal\ajinkya_render_api\ForecastClientInterface: '@ajinkya_render_api.forecast_client'
