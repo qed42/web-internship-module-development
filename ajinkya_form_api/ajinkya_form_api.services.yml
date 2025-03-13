@@ -1,0 +1,5 @@
+services:
+  ajinkya_form_api.forecast_client:
+    class: Drupal\ajinkya_form_api\ForecastClient
+    arguments: ['@http_client', '@logger.factory']
+  Drupal\ajinkya_form_api\ForecastClientInterface: '@ajinkya_form_api.forecast_client'
