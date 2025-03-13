@@ -1,0 +1,7 @@
+vaibhav_render_api.weather:
+  path: '/weather'
+  defaults:
+    _controller: '\Drupal\vaibhav_render_api\Controller\WeatherController::weatherData'
+    _title: 'Pune Weather'
+  requirements:
+    _permission: 'access content'
