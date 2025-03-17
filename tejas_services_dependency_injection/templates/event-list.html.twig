@@ -1,0 +1,16 @@
+{% extends 'page.html.twig' %}
+
+{% block content %}
+  <h1>Event Listings</h1>
+  <div class="events-container">
+    {% for event in events %}
+      <div class="event-card">
+        <h2>{{ event.title }}</h2>
+        <p><strong>Date:</strong> {{ event.date }}</p>
+        <p>{{ event.description }}</p>
+      </div>
+    {% else %}
+      <p>No events found.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

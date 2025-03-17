@@ -1,0 +1,5 @@
+name: 'Tejas Services & Dependency Injection'
+type: module
+description: 'Demonstrates service creation and dependency injection in a Drupal 11 module.'
+core_version_requirement: ^11
+package: Custom
