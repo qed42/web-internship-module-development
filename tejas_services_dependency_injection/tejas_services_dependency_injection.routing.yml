@@ -1,0 +1,7 @@
+tejas_services_dependency_injection.service_events:
+  path: '/service-events'
+  defaults:
+    _controller: 'Drupal\tejas_services_dependency_injection\Controller\EventController::build'
+    _title: 'Service Events'
+  requirements:
+    _permission: 'access content'
