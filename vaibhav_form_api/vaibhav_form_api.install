@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the vaibhav_form_api module.
+ */
+
+/**
+ * Defines the database schema for the vaibhav_form_api module.
+ */
+function vaibhav_form_api_schema() {
+  // Create a database table called rsvplist with the following fields:
+  // id [serial], uid [int], nid [int], mail [varchar], created [int].
+  $schema = [
+    'rsvplist' => [
+      'description' => 'The base table for RSVP list.',
+      'fields' => [
+        'id' => [
+          'description' => 'The primary identifier for an RSVP entry.',
+          'type' => 'serial',
+          'size' => 'small',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ],
+        'uid' => [
+          'description' => 'The user ID of the RSVP entry.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+        'nid' => [
+          'description' => 'The node ID of the RSVP entry.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+        'mail' => [
+          'description' => 'The email address of the RSVP entry.',
+          'type' => 'varchar',
+          'length' => 64,
+          'not null' => FALSE,
+          'default' => '',
+        ],
+        'created' => [
+          'description' => 'The Unix timestamp when the RSVP entry was created.',
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+      ],
+      'primary key' => ['id'],
+      'indexes' => [
+        'node' => ['nid'],
+        'node_user' => ['nid', 'uid'],
+      ],
+    ],
+
+    // Create a database table named rsvplist_enabled with the following fields:
+    // nid [int].
+    'rsvplist_enabled' => [
+      'description' => 'Tracks whether the RSVP list is enabled for a node.',
+      'fields' => [
+        'nid' => [
+          'description' => 'The node ID to enable RSVP list.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'default' => 0,
+        ],
+      ],
+      'primary key' => ['nid'],
+    ],
+  ];
+
+  return $schema;
+}
