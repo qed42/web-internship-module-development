@@ -8,7 +8,7 @@ ajinkya_config_api.weather:
   route_name: ajinkya_config_api.weather_page
 
 ajinkya_config_api.settings:
-  title: Ajinkya config api Settings
+  title: Ajinkya Config API Settings
   parent: system.admin_config_system
   route_name: ajinkya_config_api.settings
   weight: 10
