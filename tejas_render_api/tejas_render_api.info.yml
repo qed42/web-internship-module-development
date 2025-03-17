@@ -1,0 +1,5 @@
+name: 'Tejas Render API'
+type: module
+description: 'Provides a render API-based implementation for displaying events.'
+core_version_requirement: ^11
+package: Custom

@@ -1,0 +1,8 @@
+services:
+  tejas_render_api.event_service:
+    class: 'Drupal\tejas_render_api\Service\EventService'
+    arguments: []
+    public: true
+
+  tejas_render_api.theme_hook:
+    class: 'Drupal\tejas_render_api\Hooks\ThemeHook'

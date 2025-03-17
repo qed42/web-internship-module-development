@@ -1,0 +1,7 @@
+tejas_render_api.render_events:
+  path: '/render-events'
+  defaults:
+    _controller: 'Drupal\tejas_render_api\Controller\EventController::build'
+    _title: 'Render Events'
+  requirements:
+    _permission: 'access content'
