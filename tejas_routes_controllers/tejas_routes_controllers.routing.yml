@@ -1,0 +1,7 @@
+tejas_routes_controllers.more_events:
+  path: '/more-events'
+  defaults:
+    _controller: '\Drupal\tejas_routes_controllers\Controller\EventController::build'
+    _title: 'More Events'
+  requirements:
+    _permission: 'access content'
