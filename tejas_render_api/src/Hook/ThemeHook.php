@@ -1,24 +1,28 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\tejas_render_api\Hook;
 
-use Drupal\hook_event_dispatcher\Annotation\Hook;
+use Drupal\Core\Hook\Attribute\Hook;
 
 /**
- * Defines theme hooks for the module.
+ * Hooks related to theming and content output.
  */
 class ThemeHook {
 
   /**
-   * Registers the theme hook.
-   *
-   * @Hook("theme")
+   * Implements hook_theme().
    */
-  #[Hook("theme")]
-  public function registerTheme() {
+  #[Hook('theme')]
+  public function theme(): array {
     return [
-      'event_cards' => [
-        'variables' => ['events' => []],
+      'event_card' => [
+        'variables' => [
+          'name' => '',
+          'datetime' => '',
+          'description' => '',
+        ],
       ],
     ];
   }

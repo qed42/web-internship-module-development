@@ -3,7 +3,7 @@
 namespace Drupal\tejas_render_api\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\tejas_render_api\Service\EventServiceInterface;
+use Drupal\tejas_render_api\Service\EventService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -14,14 +14,14 @@ class EventController extends ControllerBase {
   /**
    * The event service.
    *
-   * @var \Drupal\tejas_render_api\Service\EventServiceInterface
+   * @var \Drupal\tejas_render_api\Service\EventService
    */
   protected $eventService;
 
   /**
    * Constructs an EventController object.
    */
-  public function __construct(EventServiceInterface $eventService) {
+  public function __construct(EventService $eventService) {
     $this->eventService = $eventService;
   }
 
@@ -40,9 +40,20 @@ class EventController extends ControllerBase {
   public function build() {
     $events = $this->eventService->getEvents();
 
+    $renderedEvents = [];
+
+    foreach ($events as $event) {
+      $renderedEvents[] = [
+        '#theme' => 'event_card',
+        '#name' => $event['name'],
+        '#datetime' => $event['datetime'],
+        '#description' => $event['description'],
+      ];
+    }
+
     return [
-      '#theme' => 'event_cards',
-      '#events' => $events,
+      '#markup' => '<h1>Rendered Events</h1>',
+      'events' => $renderedEvents,
     ];
   }
 

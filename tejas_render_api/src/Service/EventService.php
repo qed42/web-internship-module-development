@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\tejas_services_dependency_injection\Service;
+namespace Drupal\tejas_render_api\Service;
 
 use GuzzleHttp\ClientInterface;
 use Drupal\Component\Serialization\Json;
