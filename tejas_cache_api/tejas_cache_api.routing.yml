@@ -1,0 +1,7 @@
+tejas_cache_api.render_events:
+  path: '/cache-events'
+  defaults:
+    _controller: 'Drupal\tejas_cache_api\Controller\EventController::build'
+    _title: 'Cached Events'
+  requirements:
+    _permission: 'access content'

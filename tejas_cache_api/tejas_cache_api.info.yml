@@ -1,0 +1,5 @@
+name: 'Tejas Cache API'
+type: module
+description: 'Provides a caching-based implementation for displaying events.'
+core_version_requirement: ^11
+package: Custom
