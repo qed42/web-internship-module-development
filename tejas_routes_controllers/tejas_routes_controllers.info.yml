@@ -1,5 +1,0 @@
-name: 'Tejas Routes & Controllers'
-type: module
-description: 'Provides custom routes and controllers for the Events website with API integration.'
-core_version_requirement: ^11
-package: Custom

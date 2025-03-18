@@ -1,4 +1,0 @@
-services:
-  tejas_services_dependency_injection.event_service:
-    class: 'Drupal\tejas_services_dependency_injection\Service\EventService'
-    arguments: ['@http_client']
