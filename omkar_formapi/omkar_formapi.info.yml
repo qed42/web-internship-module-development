@@ -3,3 +3,5 @@ type: module
 description: 'Custom module to explore Form API with AJAX and submission preview.'
 core_version_requirement: ^11
 package: Custom
+dependencies:
+  - omkar_pluginapi
