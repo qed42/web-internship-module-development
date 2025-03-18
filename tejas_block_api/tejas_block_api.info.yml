@@ -1,0 +1,5 @@
+name: 'Tejas Block API'
+type: module
+description: 'Provides a simple Hello World block.'
+core_version_requirement: ^11
+package: Custom
