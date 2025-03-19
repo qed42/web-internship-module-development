@@ -1,8 +1,6 @@
 # Route definitions for the ajinkya_form_api module.
 
-# Each route needs a unique identifier. We recommend prefixing the route name
-# with the name of your module. Indented under the route name is the definition
-# of the route. A routing.yml file can contain any number of routes.
+# Weather page route.
 ajinkya_form_api.weather_page:
   # The URL path where this page will be displayed.
   path: '/weather/{style}'
@@ -30,6 +28,7 @@ ajinkya_form_api.settings:
     _permission: 'administer site configuration'
 
   
+# Reviewer application form route.
 ajinkya_form_api.application:
   path: '/reviewer-application'
   defaults:
