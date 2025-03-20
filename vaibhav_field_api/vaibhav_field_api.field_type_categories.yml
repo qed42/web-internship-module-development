@@ -1,0 +1,4 @@
+custom:
+  label: 'Custom Fields'
+  description: 'Custom field types defined by the Vaibhav Field API module.'
+  weight: 10
