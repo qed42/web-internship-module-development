@@ -1,0 +1,31 @@
+entity.config_profile.collection:
+  path: '/admin/structure/config-profile'
+  defaults:
+    _entity_list: 'config_profile'
+    _title: 'Config Profile configuration'
+  requirements:
+    _permission: 'administer config_profile'
+
+entity.config_profile.add_form:
+  path: '/admin/structure/config_profile/add'
+  defaults:
+    _entity_form: 'config_profile.add'
+    _title: 'Add a config profile'
+  requirements:
+    _permission: 'administer config_profile'
+
+entity.config_profile.edit_form:
+  path: '/admin/structure/config-profile/{config_profile}'
+  defaults:
+    _entity_form: 'config_profile.edit'
+    _title: 'Edit a config profile'
+  requirements:
+    _permission: 'administer config_profile'
+
+entity.config_profile.delete_form:
+  path: '/admin/structure/config-profile/{config_profile}/delete'
+  defaults:
+    _entity_form: 'config_profile.delete'
+    _title: 'Delete a config profile'
+  requirements:
+    _permission: 'administer config_profile'

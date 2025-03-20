@@ -1,0 +1,5 @@
+entity.config_profile.overview:
+  title: Config Profiles
+  parent: system.admin_structure
+  description: 'List of config profiles to extend site functionality.'
+  route_name: entity.config_profile.collection
