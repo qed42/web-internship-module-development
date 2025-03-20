@@ -1,0 +1,11 @@
+entity.custom_profile.settings:
+  title: 'Custom Profile'
+  description: 'Configure a Custom Profile entity type.'
+  route_name:  entity.custom_profile.settings
+  parent: system.admin_structure
+
+entity.custom_profile.collection:
+  title: 'Custom Profiles'
+  description: 'List of custom profiles.'
+  route_name: entity.custom_profile.collection
+  parent: system.admin_content

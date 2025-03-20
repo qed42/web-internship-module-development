@@ -1,0 +1,25 @@
+# This file is used to define the task links for the entity.
+# The task links are the links that appear on the entity page to perform actions on the entity.
+
+entity.custom_profile.settings:
+  title: 'Settings'
+  route_name: entity.custom_profile.settings
+  base_route: entity.custom_profile.settings
+entity.custom_profile.view:
+  title: 'View'
+  route_name: entity.custom_profile.canonical
+  base_route: entity.custom_profile.canonical
+entity.custom_profile.edit_form:
+  title: 'Edit'
+  route_name: entity.custom_profile.edit_form
+  base_route: entity.custom_profile.canonical
+entity.custom_profile.delete_form:
+  title: 'Delete'
+  route_name: entity.custom_profile.delete_form
+  base_route: entity.custom_profile.canonical
+  weight: 10
+entity.custom_profile.collection:
+  title: 'Custom Profiles'
+  route_name: entity.custom_profile.collection
+  base_route: system.admin_content
+  weight: 10
