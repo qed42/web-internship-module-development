@@ -1,0 +1,5 @@
+entity.config_profile.add_form:
+  route_name: 'entity.config_profile.add_form'
+  title: 'Add config profile'
+  appears_on:
+    - entity.config_profile.collection

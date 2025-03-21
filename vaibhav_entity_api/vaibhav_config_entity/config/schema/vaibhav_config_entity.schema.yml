@@ -1,0 +1,16 @@
+vaibhav_config_entity.config_profile.*:
+  type: config_entity
+  label: Config Profile
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string
+    code:
+      type: string

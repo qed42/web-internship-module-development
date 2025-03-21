@@ -1,0 +1,12 @@
+# at /admin/content/custom-profile there is a dropdown menu next to the each row taht dropdown menu contains below fields additionally a devel too.
+
+entity.custom_profile.edit_form:
+  route_name: entity.custom_profile.edit_form
+  group: custom_profile
+  title: 'Edit'
+
+entity.custom_profile.delete_form:
+  route_name: entity.custom_profile.delete_form
+  group: custom_profile
+  title: 'Delete'
+  weight: 10
