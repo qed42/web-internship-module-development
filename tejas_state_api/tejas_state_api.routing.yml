@@ -1,0 +1,7 @@
+tejas_state_api.render_state_events:
+  path: '/state-events'
+  defaults:
+    _controller: 'Drupal\tejas_state_api\Controller\EventStateController::build'
+    _title: 'State API Events'
+  requirements:
+    _permission: 'access content'

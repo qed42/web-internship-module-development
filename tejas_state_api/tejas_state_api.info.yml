@@ -1,0 +1,5 @@
+name: 'Tejas State API'
+type: module
+description: 'Utilizes the State API to cache event data and reduce external API calls.'
+core_version_requirement: ^11
+package: Custom
