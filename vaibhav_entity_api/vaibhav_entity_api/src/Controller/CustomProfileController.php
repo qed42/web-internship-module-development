@@ -90,15 +90,15 @@ class CustomProfileController extends ControllerBase {
 
     try {
       // Create.
-      // $custom_profile = $this->entityTypeManager()
-      // ->getStorage('custom_profile')->create([
-      // 'type' => 'custom_profile',
-      // 'uid' => 2,
-      // 'label' => 'New custom profile',
-      // 'status' => 1,
-      // 'description' => 'This is a new custom profile.',
-      // ]);
-      // $custom_profile->save();
+      $custom_profile = $this->entityTypeManager()
+      ->getStorage('custom_profile')->create([
+      'type' => 'custom_profile',
+      'uid' => 2,
+      'label' => 'New custom profile',
+      'status' => 1,
+      'description' => 'This is a new custom profile.',
+      ]);
+      $custom_profile->save();
     }
     catch (\Throwable $th) {
       // Throw $th;.
