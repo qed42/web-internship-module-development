@@ -1,0 +1,15 @@
+vaibhav_form_api.simplecontent:
+  path: '/rsvp'
+  defaults:
+    _form: '\Drupal\vaibhav_form_api\Form\RSVPForm'
+    _title: 'RSVP Now'
+  requirements:
+    _permission: 'view rsvplist'
+
+vaibhav_form_api.admin_settings:
+  path: '/admin/config/content/rsvp-list'
+  defaults:
+    _form: '\Drupal\vaibhav_form_api\Form\RSVPSettingsForm'
+    _title: 'RSVP List Settings'
+  requirements:
+    _permission: 'administer rsvplist'

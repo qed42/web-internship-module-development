@@ -1,0 +1,10 @@
+name: "RSVP List"
+type: module
+description: "Allows users to RSVP for events."
+core_version_requirement: ^9 || ^10 || ^11
+package: "RSVP List"
+
+dependencies:
+  - drupal:block
+
+configure: vaibhav_form_api.admin_settings

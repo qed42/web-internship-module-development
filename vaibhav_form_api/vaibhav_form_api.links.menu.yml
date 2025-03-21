@@ -1,0 +1,6 @@
+vaibhav_form_api.admin_settings:
+  title: 'RSVP List Settings'
+  description: 'Configure RSVP List module settings'
+  parent: system.admin_config_content
+  route_name: vaibhav_form_api.admin_settings
+  weight: 10

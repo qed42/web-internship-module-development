@@ -1,0 +1,15 @@
+view rsvplist:
+  title: 'View RSVP List'
+  description: 'View and submit the RSVP form'
+  provider: vaibhav_form_api
+
+access rsvplist report:
+  title: 'Access the list pf RSVPs'
+  description: 'Access the report list of RSVPs'
+  provider: vaibhav_form_api
+
+administer rsvplist:
+  title: 'Administer RSVP settings'
+  description: 'Administer the RSVP settings page'
+  provider: vaibhav_form_api
+  restrict access: true
