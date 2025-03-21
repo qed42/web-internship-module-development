@@ -1,0 +1,4 @@
+services:
+  tejas_cache_api.event_service:
+    class: 'Drupal\tejas_cache_api\Service\EventService'
+    arguments: ['@http_client', '@cache.default']
