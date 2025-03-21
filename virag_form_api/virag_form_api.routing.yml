@@ -1,0 +1,15 @@
+virag_form_api.form:
+  path: '/form'
+  defaults:
+    _form: '\Drupal\virag_form_api\Form\UserDetailsForm'
+    _title: 'User Details Form'
+  requirements:
+    _permission: 'access content'
+
+virag_form_api.display:
+  path: '/form/{user}'
+  defaults:
+    _controller: '\Drupal\virag_form_api\Controller\UserDetailsController::display'
+    _title: 'Submitted User Information'
+  requirements:
+    _permission: 'access content'
