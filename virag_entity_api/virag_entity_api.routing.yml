@@ -1,0 +1,12 @@
+anytown_status.status_update:
+  # This slug allows for URLs like /node/42/status.
+  path: '/node/{node}/status'
+  defaults:
+    _title: 'Weekly status update'
+    _form: 'Drupal\anytown_status\Form\StatusUpdateForm'
+  requirements:
+    # This isn't a great permission for this task, but we'll fix it later.
+    _permission: 'access content'
+    # This is a more advanced check that takes the provided node object and
+    # checks if the current user has permission to update it.
+    _entity_access: node.update

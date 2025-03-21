@@ -1,0 +1,5 @@
+name: 'Virag Entity API'
+type: module
+description: 'Entity API for Virag.'
+package: Custom
+core_version_requirement: ^10 || ^11
