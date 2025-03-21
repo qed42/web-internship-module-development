@@ -1,0 +1,5 @@
+name: Vaibhav State API
+type: module
+description: 'Custom state management implementation'
+package: Vaibhav
+core_version_requirement: ^11

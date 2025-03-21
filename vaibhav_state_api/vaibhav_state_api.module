@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks related to vaibhav_state_api module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vaibhav_state_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.vaibhav_state_api':
+      $output = '<h3>' . t('Vaibhav State API') . '</h3>';
+      $output .= '<p>' . t('Demonstration page: <a href=":url">State API Demo</a>', [
+        ':url' => \Drupal::url('vaibhav_state_api.demo'),
+      ]) . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_library_info_build().
+ */
+function vaibhav_state_api_library_info_build() {
+  return [
+    'demo' => [
+      'version' => '1.0',
+      'css' => [
+        'theme' => [
+          'css/vaibhav-state-api.css' => [],
+        ],
+      ],
+    ],
+  ];
+}

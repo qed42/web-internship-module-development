@@ -1,0 +1,10 @@
+vaibhav_state_api.demo:
+  path: '/admin/states'
+  defaults:
+    _controller: '\Drupal\vaibhav_state_api\Controller\StateDemoController::demoPage'
+    _title: 'State API Demo'
+  requirements:
+    _permission: 'access content'
+  options:
+    _format: 'json'
+    _no_cache: 'TRUE'
