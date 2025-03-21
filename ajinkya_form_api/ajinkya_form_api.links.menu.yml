@@ -1,0 +1,16 @@
+# This file is used to define the menu links for the module.
+
+# Menu link for weather.
+ajinkya_form_api.weather:
+  title: Weather
+  description: Check this week's weather.
+  menu_name: main
+  # From ajinkya_form_api.routing.yml.
+  route_name: ajinkya_form_api.weather_page
+
+# Link for settings in the admin_config_system. 
+ajinkya_form_api.settings:
+  title: Ajinkya Form api Settings
+  parent: system.admin_config_system
+  route_name: ajinkya_form_api.settings
+  weight: 10
