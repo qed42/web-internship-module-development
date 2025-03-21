@@ -1,0 +1,7 @@
+name: 'Vaibhav Block API'
+type: module
+description: 'A simple Custom block for Drupal 11.'
+core_version_requirement: ^11 || ^10
+package: Vaibhav
+dependencies:
+  - drupal:block
