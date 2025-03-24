@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - virag_custom_entity
+id: virag_custom_entity_delete_action
+label: 'Delete virag custom entities'
+type: virag_custom_entity
+plugin: entity:delete_action:virag_custom_entity
+configuration: {  }

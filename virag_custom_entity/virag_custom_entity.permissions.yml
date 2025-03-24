@@ -1,0 +1,3 @@
+administer virag_custom_entity:
+  title: 'Administer virag custom entities'
+  restrict access: true
