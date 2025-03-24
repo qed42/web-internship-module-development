@@ -1,0 +1,4 @@
+services:
+  vaibhav_services_dependency_injection.custom_service:
+    class: 'Drupal\vaibhav_services_dependency_injection\Service\CustomService'
+    arguments: []
