@@ -1,0 +1,7 @@
+name: 'vaibhav_routes_controllers'
+type: module
+description: 'Demonstrates routes and controllers in Drupal 11.'
+package: Vaibhav
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:system
