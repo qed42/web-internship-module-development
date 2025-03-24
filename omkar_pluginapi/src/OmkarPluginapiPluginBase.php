@@ -17,26 +17,24 @@ abstract class OmkarPluginapiPluginBase extends PluginBase implements OmkarPlugi
   public function label(): string {
     return (string) $this->pluginDefinition['label'];
   }
-  
+
   /**
    * {@inheritdoc}
    */
-  public function description()
-  {
+  public function description() {
     return $this->pluginDefinition['description'];
   }
 
-    /**
-     * {@inheritdoc}
-     */
-  public function calories()
-  {
-    return $this->pluginDefinition['calories'];
-    
-  }
-
-   /**
+  /**
    * {@inheritdoc}
    */
-  // abstract public function order(array $extras);
+  public function calories() {
+    return $this->pluginDefinition['calories'];
+
+  }
+
+  /**
+  * {@inheritdoc}
+  */
+  // Abstract public function order(array $extras);.
 }
