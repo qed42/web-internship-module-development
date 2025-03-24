@@ -1,0 +1,5 @@
+name: Virag Field API
+type: module
+description: 'Provides a custom birthday field type.'
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11
