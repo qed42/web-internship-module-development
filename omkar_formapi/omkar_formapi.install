@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Install file for the Omkar Form API module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function omkar_formapi_schema() {
+  $schema['omkar_formapi_data'] = [
+    'description' => 'Stores form data submitted from Omkar Form API form.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'Submitted name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'email' => [
+        'description' => 'Submitted email address.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'message' => [
+        'description' => 'Submitted message.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'description' => 'Timestamp of submission.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
