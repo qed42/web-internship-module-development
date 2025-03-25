@@ -1,0 +1,4 @@
+services:
+  tejas_state_api.event_state_service:
+    class: 'Drupal\tejas_state_api\Service\EventStateService'
+    arguments: ['@http_client', '@state']
