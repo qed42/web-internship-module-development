@@ -1,0 +1,5 @@
+virag_custom_entity.add_form:
+  title: 'Add virag custom entity'
+  route_name: entity.virag_custom_entity.add_form
+  appears_on:
+    - entity.virag_custom_entity.collection

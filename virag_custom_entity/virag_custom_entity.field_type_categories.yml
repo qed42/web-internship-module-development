@@ -1,0 +1,4 @@
+# virag_custom_entity.field_type_categories.yml
+Custom:
+  label: 'Custom Field Types'
+  description: 'Custom field types for virag_custom_entity module.'

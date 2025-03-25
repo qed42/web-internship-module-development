@@ -1,0 +1,10 @@
+entity.virag_custom_entity.edit_form:
+  route_name: entity.virag_custom_entity.edit_form
+  group: virag_custom_entity
+  title: 'Edit'
+
+entity.virag_custom_entity.delete_form:
+  route_name: entity.virag_custom_entity.delete_form
+  group: virag_custom_entity
+  title: 'Delete'
+  weight: 10

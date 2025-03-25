@@ -1,0 +1,22 @@
+entity.virag_custom_entity.settings:
+  title: 'Settings'
+  route_name: entity.virag_custom_entity.settings
+  base_route: entity.virag_custom_entity.settings
+entity.virag_custom_entity.view:
+  title: 'View'
+  route_name: entity.virag_custom_entity.canonical
+  base_route: entity.virag_custom_entity.canonical
+entity.virag_custom_entity.edit_form:
+  title: 'Edit'
+  route_name: entity.virag_custom_entity.edit_form
+  base_route: entity.virag_custom_entity.canonical
+entity.virag_custom_entity.delete_form:
+  title: 'Delete'
+  route_name: entity.virag_custom_entity.delete_form
+  base_route: entity.virag_custom_entity.canonical
+  weight: 10
+entity.virag_custom_entity.collection:
+  title: 'Virag custom entities'
+  route_name: entity.virag_custom_entity.collection
+  base_route: system.admin_content
+  weight: 10
