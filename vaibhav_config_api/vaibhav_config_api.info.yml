@@ -1,0 +1,7 @@
+name: 'vaibhav_config_api'
+type: module
+description: 'A module for Configuration API in drupal'
+package: Vaibhav
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:config

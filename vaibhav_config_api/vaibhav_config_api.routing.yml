@@ -1,0 +1,7 @@
+vaibhav_config_api.settings:
+  path: '/admin/config/vaibhav-config-api'
+  defaults:
+    _form: '\Drupal\vaibhav_config_api\Form\ConfigApiForm'
+    _title: 'Vaibhav Config API Settings'
+  requirements:
+    _permission: 'administer site configuration'
