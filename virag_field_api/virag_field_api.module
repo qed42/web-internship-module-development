@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains virag_field_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function virag_field_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.virag_field_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Virag Field API module provides a custom birthday field type.') . '</p>';
+      return $output;
+  }
+}
