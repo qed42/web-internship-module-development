@@ -1,0 +1,24 @@
+administer custom_profile:
+  title: 'Administer custom profiles'
+  description: 'Allow users to manage all custom profile settings and configurations.'
+  restrict access: true
+
+delete custom_profile:
+  title: 'Delete custom profiles'
+  description: 'Allow users to delete custom profiles.'
+  restrict access: true
+
+add custom_profile:
+  title: 'Add custom profiles'
+  description: 'Allow users to create new custom profiles.'
+  restrict access: true
+
+view custom_profile:
+  title: 'View custom profiles'
+  description: 'Allow users to view custom profiles.'
+  restrict access: false
+
+edit custom_profile:
+  title: 'Edit custom profiles'
+  description: 'Allow users to edit existing custom profiles.'
+  restrict access: true

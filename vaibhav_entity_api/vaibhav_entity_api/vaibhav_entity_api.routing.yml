@@ -1,0 +1,23 @@
+entity.custom_profile.settings:
+  path: 'admin/structure/custom-profile'
+  defaults:
+    _form: '\Drupal\vaibhav_entity_api\Form\CustomProfileSettingsForm'
+    _title: 'Custom Profile'
+  requirements:
+    _permission: 'administer custom_profile'
+
+vaibhav_entity_api.custom_profile:
+  path: '/example'
+  defaults:
+    _controller: '\Drupal\vaibhav_entity_api\Controller\CustomProfileController::build'
+    _title: 'Custom Profile'
+  requirements:
+    _permission: 'access content'
+
+entity.custom_profile.edit_form:
+  path: '/admin/content/profile/{custom_profile}/edit'
+  defaults:
+    _entity_form: custom_profile.edit
+    _title: 'Edit Custom Profile'
+  requirements:
+    _permission: 'edit custom_profile'

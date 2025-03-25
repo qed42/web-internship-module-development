@@ -1,0 +1,7 @@
+# At /admin/content/profile/add, the "Add custom profile" link appears.
+# Content > Custom Profiles
+custom_profile.add_form:
+  title: 'Add custom profile'
+  route_name: entity.custom_profile.add_form
+  appears_on:
+    - entity.custom_profile.collection
