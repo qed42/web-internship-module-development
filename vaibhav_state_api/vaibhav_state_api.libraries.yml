@@ -1,0 +1,8 @@
+demo:
+  version: 1.x
+  js:
+    js/vaibhav_state_api.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.ajax
