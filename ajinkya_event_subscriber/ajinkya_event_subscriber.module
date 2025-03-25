@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains ajinkya_event_subscriber.module.
+ */
+
+use Drupal\ajinkya_event_subscriber\Event\UserLoginEvent;
+
+/**
+ * Implements hook_user_login().
+ */
+function ajinkya_event_subscriber_user_login($account) {
+  // Create a new event with the user account.
+  $event = new UserLoginEvent($account);
+  // Get the event dispatcher service and dispatch the event.
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch($event, UserLoginEvent::EVENT_NAME);
+}
