@@ -1,0 +1,15 @@
+ajinkya_state_api.set_state:
+  path: '/ajinkya-state/set'
+  defaults:
+    _controller: 'Drupal\ajinkya_state_api\Controller\StateController::setState'
+    _title: 'Set State Value'
+  requirements:
+    _permission: 'access content'
+
+ajinkya_state_api.get_state:
+  path: '/ajinkya-state/get'
+  defaults:
+    _controller: 'Drupal\ajinkya_state_api\Controller\StateController::getState'
+    _title: 'Get State Value'
+  requirements:
+    _permission: 'access content'

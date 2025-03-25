@@ -1,0 +1,5 @@
+name: 'Ajinkya State API'
+type: module
+description: 'Demonstrates the use of State API to store and retrieve values.'
+core_version_requirement: ^10|^11
+package: Custom

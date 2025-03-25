@@ -1,0 +1,4 @@
+services:
+  ajinkya_state_api.example_service:
+    class: 'Drupal\ajinkya_state_api\Service\ExampleStateService'
+    arguments: ['@state']
