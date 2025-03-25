@@ -1,0 +1,17 @@
+vaibhav_routes_controllers.simple_route:
+  path: '/static'
+  defaults:
+    _controller: '\Drupal\vaibhav_routes_controllers\Controller\VaibhavController::simpleMessage'
+    _title: 'Simple Route'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+
+vaibhav_routes_controllers.dynamic_route:
+  path: '/dynamic/{name}'
+  defaults:
+    _controller: '\Drupal\vaibhav_routes_controllers\Controller\VaibhavController::dynamicMessage'
+    _title: 'Dynamic Route'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
