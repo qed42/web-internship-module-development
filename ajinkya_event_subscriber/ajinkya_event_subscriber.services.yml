@@ -1,0 +1,6 @@
+services:
+  ajinkya_event_subscriber.user_login_subscriber:
+    class: Drupal\ajinkya_event_subscriber\EventSubscriber\UserLoginSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

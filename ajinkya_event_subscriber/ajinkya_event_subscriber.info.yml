@@ -1,0 +1,7 @@
+name: 'Event Subscriber'
+type: module
+description: 'Demonstrates event dispatching and subscribing in Drupal.'
+core_version_requirement:  ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:user
