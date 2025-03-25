@@ -1,0 +1,7 @@
+field.field_settings.calendar_field:
+  type: mapping
+  label: 'Calendar field settings'
+  mapping:
+    value:
+      type: string
+      label: 'Date value'

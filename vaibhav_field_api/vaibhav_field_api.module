@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for the Custom Calendar Field module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vaibhav_field_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.vaibhav_field_api':
+      return '<p>' . t('Provides a calendar picker field type for date selection.') . '</p>';
+  }
+}

@@ -1,0 +1,7 @@
+name: Calendar Field
+type: module
+description: 'Provides a calendar picker field type.'
+package: Vaibhav
+core_version_requirement: ^11
+dependencies:
+  - drupal:datetime
