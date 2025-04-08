@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains vaibhav_block_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vaibhav_block_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.vaibhav_block_api':
+      \Drupal::messenger()->addMessage(t('This module provides a Namaste Bharat block.'));
+      break;
+  }
+}
