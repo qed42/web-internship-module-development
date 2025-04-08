@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - vaibhav_entity_api
+id: custom_profile_delete_action
+label: 'Delete custom profiles'
+type: custom_profile
+plugin: entity:delete_action:custom_profile
+configuration: {  }

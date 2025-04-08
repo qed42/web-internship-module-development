@@ -1,0 +1,5 @@
+name: 'vaibhav_entity_api'
+type: module
+description: 'Walkthrough for content entity using entity API'
+package: Entity API
+core_version_requirement: ^10 || ^11

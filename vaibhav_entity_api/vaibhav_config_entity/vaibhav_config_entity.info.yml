@@ -1,0 +1,5 @@
+name: 'vaibhav_config_entity'
+type: module
+description: 'Custom module for Configuration APU'
+package: Vaibhav
+core_version_requirement: ^10 || ^11
