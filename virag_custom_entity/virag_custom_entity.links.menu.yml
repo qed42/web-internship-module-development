@@ -1,0 +1,11 @@
+entity.virag_custom_entity.settings:
+  title: 'Virag custom entity'
+  description: 'Configure a Virag custom entity entity type.'
+  route_name:  entity.virag_custom_entity.settings
+  parent: system.admin_structure
+
+entity.virag_custom_entity.collection:
+  title: 'Virag custom entities'
+  description: 'List of virag custom entities.'
+  route_name: entity.virag_custom_entity.collection
+  parent: system.admin_content

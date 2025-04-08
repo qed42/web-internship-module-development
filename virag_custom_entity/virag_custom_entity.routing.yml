@@ -1,0 +1,7 @@
+entity.virag_custom_entity.settings:
+  path: 'admin/structure/virag-custom-entity'
+  defaults:
+    _form: '\Drupal\virag_custom_entity\Form\ViragCustomEntitySettingsForm'
+    _title: 'Virag custom entity'
+  requirements:
+    _permission: 'administer virag_custom_entity'

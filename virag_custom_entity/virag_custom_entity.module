@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Provides a virag custom entity entity type.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Render\Element;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function virag_custom_entity_theme(): array {
+  return [
+    'virag_custom_entity' => ['render element' => 'elements'],
+  ];
+}
+
+/**
+ * Prepares variables for virag custom entity templates.
+ *
+ * Default template: virag-custom-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the virag custom entity information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_virag_custom_entity(array &$variables): void {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function virag_custom_entity_user_cancel($edit, UserInterface $account, $method): void {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish virag custom entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('virag_custom_entity');
+      $virag_custom_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->accessCheck(FALSE)
+        ->execute();
+      foreach ($storage->loadMultiple($virag_custom_entity_ids) as $virag_custom_entity) {
+        $virag_custom_entity->set('status', FALSE)->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize virag custom entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('virag_custom_entity');
+      $virag_custom_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->accessCheck(FALSE)
+        ->execute();
+      foreach ($storage->loadMultiple($virag_custom_entity_ids) as $virag_custom_entity) {
+        $virag_custom_entity->setOwnerId(0)->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function virag_custom_entity_user_predelete(UserInterface $account): void {
+  // Delete virag custom entities that belong to this account.
+  $storage = \Drupal::entityTypeManager()->getStorage('virag_custom_entity');
+  $virag_custom_entity_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->accessCheck(FALSE)
+    ->execute();
+  $storage->delete(
+    $storage->loadMultiple($virag_custom_entity_ids)
+  );
+}
