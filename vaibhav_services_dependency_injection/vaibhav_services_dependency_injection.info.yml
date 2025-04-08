@@ -1,0 +1,7 @@
+name: 'Vaibhav Services & Dependency Injection'
+type: module
+description: 'Demonstrates services and dependency injection'
+package: Vaibhav
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:system

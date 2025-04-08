@@ -1,0 +1,8 @@
+vaibhav_services_dependency_injection.show_message:
+  path: '/vaibhav-service-demo'
+  defaults:
+    _controller: '\Drupal\vaibhav_services_dependency_injection\Controller\ServiceDemoController::showMessage'
+    _title: 'Service Demo'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
