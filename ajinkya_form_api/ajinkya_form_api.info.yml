@@ -1,0 +1,5 @@
+name: "Ajinkya Form API"
+type: module
+description: "This module contains FORM API"
+package: Custom
+core_version_requirement: ^10 || ^11
