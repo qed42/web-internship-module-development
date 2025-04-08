@@ -1,0 +1,10 @@
+services:
+  virag_form_api.cron:
+    class: 'Drupal\virag_form_api\Cron\ClearUserDataCron'
+    arguments: ['@state']
+    tags:
+      - { name: 'drupal.cron' }
+
+  virag_form_api.country_service:
+    class: 'Drupal\virag_form_api\Service\CountryService'
+    arguments: ['@http_client', '@logger.factory']
