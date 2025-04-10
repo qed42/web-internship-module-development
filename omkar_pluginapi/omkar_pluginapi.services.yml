@@ -1,0 +1,4 @@
+services:
+  plugin.manager.omkar_pluginapi:
+    class: Drupal\omkar_pluginapi\OmkarPluginapiPluginManager
+    arguments: ['@container.namespaces', '@cache.default', '@module_handler']
