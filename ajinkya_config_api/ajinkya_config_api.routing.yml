@@ -1,0 +1,32 @@
+# Route definitions for the ajinkya_config_apii module.
+
+# Each route needs a unique identifier. We recommend prefixing the route name
+# with the name of your module. Indented under the route name is the definition
+# of the route. A routing.yml file can contain any number of routes.
+ajinkya_config_api.weather_page:
+  # The URL path where this page will be displayed.
+  path: '/weather/{style}'
+  defaults:
+    # Title of the page used for things like <title> tag.
+    _title: 'Weather at the market'
+    # Defines which method, on which class, should be called to retrieve the
+    # content of the page.
+    _controller: '\Drupal\ajinkya_config_api\Controller\WeatherPage::build'
+    style: 'short'
+  requirements:
+    # What permissions a user needs to have in order to view this page.
+    _permission: 'view weekly weather'
+
+
+# Settings form route.
+ajinkya_config_api.settings:
+  path: '/admin/config/system/ajinkya_config_api'
+  defaults:
+    _title: 'ajinkya_config_api Settings'
+    # For form controllers use _form instead of _controller. This tells Drupal
+    # to use the build, validate, submit workflow for a form.
+    _form: 'Drupal\ajinkya_config_api\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+  
