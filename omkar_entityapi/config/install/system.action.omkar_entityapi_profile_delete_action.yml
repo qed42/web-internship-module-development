@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - omkar_entityapi
+id: omkar_entityapi_profile_delete_action
+label: 'Delete profiles'
+type: omkar_entityapi_profile
+plugin: entity:delete_action:omkar_entityapi_profile
+configuration: {  }
