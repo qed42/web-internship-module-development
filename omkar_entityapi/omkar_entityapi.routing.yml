@@ -1,0 +1,16 @@
+entity.omkar_entityapi_profile.settings:
+  path: 'admin/structure/omkar-entityapi-profile'
+  defaults:
+    _form: '\Drupal\omkar_entityapi\Form\ProfileSettingsForm'
+    _title: 'Profile'
+  requirements:
+    _permission: 'administer omkar_entityapi_profile'
+
+
+omkar_entityapi.custom_profile:
+  path: '/example'
+  defaults:
+    _controller: '\Drupal\omkar_entityapi\Controller\CustomProfileController::build'
+    _title: 'Custom Profile'
+  requirements:
+    _permission: 'access content'

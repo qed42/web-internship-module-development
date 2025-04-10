@@ -1,0 +1,3 @@
+administer omkar_entityapi_profile:
+  title: 'Administer profiles'
+  restrict access: true
