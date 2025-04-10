@@ -1,0 +1,10 @@
+vaibhav_state_api.manager:
+  type: config_object
+  label: 'Vaibhav State API configuration'
+  mapping:
+    storage:
+      type: sequence
+      label: 'State storage'
+      sequence:
+        type: string
+        label: 'State entry'

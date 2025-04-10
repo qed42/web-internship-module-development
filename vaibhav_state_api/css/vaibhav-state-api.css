@@ -1,0 +1,21 @@
+.vaibhav-state-demo {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.value-at-page-load {
+  color: blue;
+  font-weight: bold;
+}
+
+.action-performed {
+  color: green;
+  font-weight: bold;
+}
+
+.value-after-action {
+  color: red;
+  font-weight: bold;
+}
