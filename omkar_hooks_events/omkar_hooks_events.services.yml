@@ -1,0 +1,6 @@
+services:
+  omkar_hooks_events.subscriber:
+    class: Drupal\omkar_hooks_events\EventSubscriber\OmkarHooksEventsSubscriber
+    arguments: ['@messenger', '@logger.factory']
+    tags:
+      - { name: event_subscriber }
