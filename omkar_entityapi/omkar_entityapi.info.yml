@@ -1,0 +1,5 @@
+name: 'omkar_entityapi'
+type: module
+description: 'demonstrates implementation of entityapi'
+package: Custom
+core_version_requirement: ^10 || ^11
