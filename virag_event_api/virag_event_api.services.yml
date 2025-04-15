@@ -1,0 +1,9 @@
+services:
+  virag_event_api.button_click_dispatcher:
+    class: Drupal\virag_event_api\EventDispatcher\ButtonClickEventDispatcher
+    arguments: ['@event_dispatcher']
+
+  virag_event_api.button_click_subscriber:
+    class: Drupal\virag_event_api\EventSubscriber\ButtonClickSubscriber
+    tags:
+      - { name: event_subscriber }
