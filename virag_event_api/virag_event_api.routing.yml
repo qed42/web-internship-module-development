@@ -1,0 +1,7 @@
+virag_event_api.button:
+  path: '/custom-button'
+  defaults:
+    _controller: '\Drupal\virag_event_api\Controller\ButtonController::renderButton'
+    _title: 'Custom Button'
+  requirements:
+    _permission: 'access content'

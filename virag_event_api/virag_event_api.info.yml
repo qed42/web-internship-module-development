@@ -1,0 +1,5 @@
+name: 'virag_event_api'
+type: module
+description: 'A custom module to subscribe to events.'
+package: Custom
+core_version_requirement: ^10 || ^11
