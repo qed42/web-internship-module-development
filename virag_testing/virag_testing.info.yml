@@ -1,0 +1,5 @@
+name: 'virag_testing'
+type: module
+description: 'Module with basic calculator functionality to explore testing'
+package: Custom
+core_version_requirement: ^10 || ^11
