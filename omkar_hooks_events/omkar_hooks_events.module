@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\omkar_hooks_events\Event\BlogPublishedEvent;
+use Drupal\node\NodeInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_node_presave().
+ */
+
+/**
+ * Implements hook_node_presave().
+ */
+function omkar_hooks_events_node_presave(Node $node) {
+  // Ensure it's a blog post.
+  if ($node->bundle() === 'blog') {
+
+    // Check if the field exists before accessing it.
+    if ($node->hasField('field_tag')) {
+      $tags = $node->get('field_tag')->getValue();
+
+      $specific_tag_id = 4;
+      $tag_exists = FALSE;
+
+      foreach ($tags as $tag) {
+        if ($tag['target_id'] == $specific_tag_id) {
+          $tag_exists = TRUE;
+          break;
+        }
+      }
+
+      if (!$tag_exists) {
+        $tags[] = ['target_id' => $specific_tag_id];
+        $node->set('field_tag', $tags);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function omkar_hooks_events_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_blog_form') {
+    $form['omkar_custom_note'] = [
+      '#markup' => '<div class="messages messages--status">Note: Don’t forget to write catchy titles!</div>',
+      '#weight' => -10,
+    ];
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+
+/**
+ * Implements hook_entity_update().
+ */
+function omkar_hooks_events_entity_update($entity) {
+  if ($entity instanceof NodeInterface) {
+    // Check if the node is a blog and is published.
+    if ($entity->bundle() === 'blog' && $entity->isPublished()) {
+      $dispatcher = \Drupal::service('event_dispatcher');
+      $event = new BlogPublishedEvent($entity);
+      $dispatcher->dispatch($event, BlogPublishedEvent::EVENT_NAME);
+    }
+  }
+} 

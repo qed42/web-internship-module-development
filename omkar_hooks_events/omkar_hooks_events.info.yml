@@ -1,0 +1,5 @@
+name: 'Omkar Hooks & Events'
+type: module
+description: 'Implements hooks and event subscribers for blog site.'
+core_version_requirement: ^11
+package: Custom
