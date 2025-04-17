@@ -1,0 +1,5 @@
+name: "Ajinkya Config Api"
+type: module
+description: "This module contains config-api"
+package: Custom
+core_version_requirement: ^10 || ^11
