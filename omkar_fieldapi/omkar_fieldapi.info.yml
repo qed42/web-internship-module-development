@@ -1,0 +1,7 @@
+name: 'Omkar Field api'
+type: module
+description: 'Custom RGB color field using Field API..'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - field
