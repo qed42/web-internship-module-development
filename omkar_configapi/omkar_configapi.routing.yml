@@ -1,0 +1,15 @@
+omkar_configapi.message:
+  path: '/omkar-configapi/message'
+  defaults:
+    _controller: '\Drupal\omkar_configapi\Controller\OmkarConfigapiController::displayMessage'
+    _title: 'Omkar Config API Message'
+  requirements:
+    _permission: 'access content'
+
+omkar_configapi.settings_form:
+  path: '/admin/config/system/omkar-configapi-settings'
+  defaults:
+    _form: '\Drupal\omkar_configapi\Form\OmkarConfigapiSettingsForm'
+    _title: 'Omkar Config API Settings'
+  requirements:
+    _permission: 'administer site configuration'
