@@ -1,0 +1,10 @@
+services:
+  omkar_cache_api.blog_cache_service:
+    class: 'Drupal\omkar_cache_api\Service\BlogCacheService'
+    arguments: ['@cache.default']
+
+  omkar_cache_api.blog_event_subscriber:
+    class: 'Drupal\omkar_cache_api\EventSubscriber\BlogEventSubscriber'
+    arguments: ['@omkar_cache_api.blog_cache_service']
+    tags:
+      - { name: event_subscriber }
