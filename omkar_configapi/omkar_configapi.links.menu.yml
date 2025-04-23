@@ -1,0 +1,5 @@
+omkar_configapi.settings:
+  title: 'Omkar Config API Settings'
+  description: 'Settings for the Omkar Config API module.'
+  parent: system.admin_config_system  # This places it under Admin > Configuration
+  route_name: omkar_configapi.settings_form  # This must match the form route name.

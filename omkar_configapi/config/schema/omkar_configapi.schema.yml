@@ -1,0 +1,7 @@
+omkar_configapi.settings:
+  type: config_object
+  label: 'Omkar Config API Settings'
+  mapping:
+    welcome_message:
+      type: text
+      label: 'Welcome Message'
