@@ -1,0 +1,7 @@
+name: 'Omkar Cache API'
+type: module
+description: 'Caches the latest blog posts to improve performance.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:node

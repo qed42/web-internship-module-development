@@ -1,0 +1,7 @@
+omkar_cache_api.latest_blogs:
+  path: '/latest-blogs'
+  defaults:
+    _controller: '\Drupal\omkar_cache_api\Controller\BlogController::latestBlogs'
+    _title: 'Latest Blog Posts'
+  requirements:
+    _permission: 'access content'
