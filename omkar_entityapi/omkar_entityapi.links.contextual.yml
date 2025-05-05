@@ -1,0 +1,10 @@
+entity.omkar_entityapi_profile.edit_form:
+  route_name: entity.omkar_entityapi_profile.edit_form
+  group: omkar_entityapi_profile
+  title: 'Edit'
+
+entity.omkar_entityapi_profile.delete_form:
+  route_name: entity.omkar_entityapi_profile.delete_form
+  group: omkar_entityapi_profile
+  title: 'Delete'
+  weight: 10

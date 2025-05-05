@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - omkar_entityapi
+id: omkar_entityapi_profile_save_action
+label: 'Save profiles'
+type: omkar_entityapi_profile
+plugin: entity:save_action:omkar_entityapi_profile
+configuration: {  }

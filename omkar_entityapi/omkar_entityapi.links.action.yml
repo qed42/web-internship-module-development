@@ -1,0 +1,5 @@
+omkar_entityapi_profile.add_form:
+  title: 'Add profile'
+  route_name: entity.omkar_entityapi_profile.add_form
+  appears_on:
+    - entity.omkar_entityapi_profile.collection
