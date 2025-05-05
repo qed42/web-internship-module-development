@@ -1,0 +1,14 @@
+services:
+  vaibhav_state_api.manager:
+    class: Drupal\vaibhav_state_api\State\StateManager
+    arguments: ['@keyvalue']
+
+  state.custom_state:
+    class: Drupal\vaibhav_state_api\Plugin\State\CustomState
+    arguments:
+      - []
+      - 'custom_state'
+      - null
+      - '@vaibhav_state_api.manager'
+    tags:
+      - { name: state, category: custom_states }
