@@ -1,0 +1,5 @@
+name: 'omkar_pluginapi'
+type: module
+description: 'Demo plugin api demo'
+package: Custom
+core_version_requirement: ^10 || ^11

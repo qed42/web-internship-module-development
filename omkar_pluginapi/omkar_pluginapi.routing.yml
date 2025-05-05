@@ -1,0 +1,7 @@
+omkar_pluginapi.show_plugins:
+  path: '/omkar-pluginapi'
+  defaults:
+    _controller: '\Drupal\omkar_pluginapi\Controller\OmkarPluginapiController::showPlugins'
+    _title: 'Omkar PluginAPI Sandwiches'
+  requirements:
+    _permission: 'access content'
