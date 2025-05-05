@@ -1,0 +1,4 @@
+services:
+  virag_testing.calculator:
+    class: Drupal\virag_testing\Calculator
+    arguments: []
